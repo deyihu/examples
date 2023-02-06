@@ -1,6 +1,18 @@
 {
   "examples" : [
     {
+      "name" : "new-features",
+      "title" : {"cn" : "新功能", "en":"new features"},
+      "examples" : [
+        {"name" : "color-interpolate", "title" : {"cn" : "颜色插值", "en" : "color interpolate"}},
+        {"name" : "resource-manager", "title" : {"cn" : "静态资源管理", "en" : "resource-manager"}},
+        {"name" : "ui-collision", "title" : {"cn" : "UIComponent碰撞", "en" : "UIComponent collision"}},
+        {"name" : "options-proxy", "title" : {"cn" : "利用Proxy来更新配置信息", "en" : "update options by Proxy"}},
+        {"name" : "set-altitude", "title" : {"cn" : "设置图形的高度", "en" : "set geom altitude"}},
+        {"name" : "infowindow-scroll", "title" : {"cn" : "InfoWindow内容支持滚动", "en" : "infowindow content support scroll"}}
+      ]
+    },
+    {
       "name" : "map",
       "title" : {"cn" : "地图", "en":"Map"},
       "examples" : [
