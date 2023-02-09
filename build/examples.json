@@ -9,7 +9,8 @@
         {"name" : "ui-collision", "title" : {"cn" : "UIComponent碰撞", "en" : "UIComponent collision"}},
         {"name" : "options-proxy", "title" : {"cn" : "利用Proxy来更新配置信息", "en" : "update options by Proxy"}},
         {"name" : "set-altitude", "title" : {"cn" : "设置图形的高度", "en" : "set geom altitude"}},
-        {"name" : "infowindow-scroll", "title" : {"cn" : "InfoWindow内容支持滚动", "en" : "infowindow content support scroll"}}
+        {"name" : "infowindow-scroll", "title" : {"cn" : "InfoWindow内容支持滚动", "en" : "infowindow content support scroll"}},
+        {"name" : "uimarker-align", "title" : {"cn" : "UIMarker对齐", "en" : "UIMarker Alignment"}}
       ]
     },
     {

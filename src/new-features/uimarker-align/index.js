@@ -16,21 +16,23 @@ map.on('click', function (e) {
   console.log(e);
 });
 
-var offset = 0.001;
-var center = map.getCenter();
-var c1 = center.add(-offset, 0);
 
-var c2 = center.add(offset, 0);
+var center = map.getCenter();
 
 var layer = new maptalks.VectorLayer('layer', {
   enableAltitude: true
 }).addTo(map);
-var point = new maptalks.Marker(c1);
+var point = new maptalks.Marker(center, {
+  symbol: {
+    markerType: 'ellipse',
+    markerWidth: 5,
+    markerHeight: 5
+  }
+});
 layer.addGeometry(point);
 
-var uiMarker = new maptalks.ui.UIMarker(c2, {
-  content: '<div class="text-marker">maptalks</div>',
-  dy: -36
+var uiMarker = new maptalks.ui.UIMarker(center, {
+  content: '<div class="text_marker">maptalks</div>'
 });
 uiMarker.addTo(map);
 
@@ -40,14 +42,15 @@ function getEle(selector) {
   }
   return document.getElementById(selector.substring(1, Infinity));
 }
-
 function on(ele, type, hanlder) {
   ele.addEventListener(type, hanlder);
 }
 
-on(getEle('#altitude'), 'change', function (e) {
-  [point, uiMarker].forEach(function (marker) {
-    marker.setAltitude(parseFloat(e.target.value));
-  });
+on(getEle('#horizontalAlignment'), 'change', function (e) {
+  uiMarker.options.horizontalAlignment = this.value;
+});
+
+on(getEle('#verticalAlignment'), 'change', function (e) {
+  uiMarker.options.verticalAlignment = this.value;
 });
 

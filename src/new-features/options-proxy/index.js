@@ -20,8 +20,16 @@ var layer = new maptalks.VectorLayer('layer').addTo(map);
 var point = new maptalks.Marker(map.getCenter());
 layer.addGeometry(point);
 
+var uiMarker = new maptalks.ui.UIMarker(map.getCenter(), {
+  content: '<div class="text_marker">maptalks</div>',
+  dy: -100
+}).addTo(map);
+
 function getEle(selector) {
-  return document.querySelector(selector);
+  if (document.querySelector) {
+    return document.querySelector(selector);
+  }
+  return document.getElementById(selector.substring(1, Infinity));
 }
 
 function on(ele, type, hanlder) {
@@ -37,7 +45,8 @@ on(getEle('#layeropacity'), 'change', function (e) {
   layer.options.opacity = parseFloat(this.value);
 });
 
-on(getEle('#layervisible'), 'change', function (e) {
+on(getEle('#visible'), 'change', function (e) {
   baseLayer.options.visible = this.checked;
   layer.options.visible = this.checked;
+  uiMarker.options.visible = this.checked;
 });
