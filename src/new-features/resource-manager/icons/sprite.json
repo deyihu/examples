@@ -1,1 +1,218 @@
-{"116":{"x":0,"y":91,"width":47,"height":32},"120":{"x":46,"y":53,"width":40,"height":36},"125":{"x":0,"y":53,"width":46,"height":38},"128":{"x":29,"y":0,"width":34,"height":51},"134":{"x":0,"y":0,"width":29,"height":53},"135":{"x":47,"y":91,"width":49,"height":32},"139":{"x":0,"y":123,"width":52,"height":32},"140":{"x":63,"y":0,"width":37,"height":51},"142":{"x":100,"y":0,"width":29,"height":49},"016":{"x":52,"y":123,"width":20,"height":24},"000":{"x":72,"y":123,"width":16,"height":16},"004":{"x":88,"y":123,"width":26,"height":14}}
+{
+    "caiyi": {
+        "x": 0,
+        "y": 0,
+        "width": 48,
+        "height": 48
+    },
+    "chongzhi": {
+        "x": 48,
+        "y": 0,
+        "width": 48,
+        "height": 48
+    },
+    "daka": {
+        "x": 96,
+        "y": 0,
+        "width": 48,
+        "height": 48
+    },
+    "dazhaohu": {
+        "x": 144,
+        "y": 0,
+        "width": 48,
+        "height": 48
+    },
+    "dengji": {
+        "x": 192,
+        "y": 0,
+        "width": 48,
+        "height": 48
+    },
+    "dingwei": {
+        "x": 240,
+        "y": 0,
+        "width": 48,
+        "height": 48
+    },
+    "faxian": {
+        "x": 0,
+        "y": 48,
+        "width": 48,
+        "height": 48
+    },
+    "gonggao": {
+        "x": 48,
+        "y": 48,
+        "width": 48,
+        "height": 48
+    },
+    "guanzhu": {
+        "x": 96,
+        "y": 48,
+        "width": 48,
+        "height": 48
+    },
+    "hongbao": {
+        "x": 144,
+        "y": 48,
+        "width": 48,
+        "height": 48
+    },
+    "huiyuan": {
+        "x": 192,
+        "y": 48,
+        "width": 48,
+        "height": 48
+    },
+    "huore": {
+        "x": 240,
+        "y": 48,
+        "width": 48,
+        "height": 48
+    },
+    "jiaoyou": {
+        "x": 0,
+        "y": 96,
+        "width": 48,
+        "height": 48
+    },
+    "jishiliaotian": {
+        "x": 48,
+        "y": 96,
+        "width": 48,
+        "height": 48
+    },
+    "liwu": {
+        "x": 96,
+        "y": 96,
+        "width": 48,
+        "height": 48
+    },
+    "luxiang": {
+        "x": 144,
+        "y": 96,
+        "width": 48,
+        "height": 48
+    },
+    "meiyan": {
+        "x": 192,
+        "y": 96,
+        "width": 48,
+        "height": 48
+    },
+    "renwu": {
+        "x": 240,
+        "y": 96,
+        "width": 48,
+        "height": 48
+    },
+    "renzheng": {
+        "x": 0,
+        "y": 144,
+        "width": 48,
+        "height": 48
+    },
+    "shipin": {
+        "x": 48,
+        "y": 144,
+        "width": 48,
+        "height": 48
+    },
+    "shipinbofang": {
+        "x": 96,
+        "y": 144,
+        "width": 48,
+        "height": 48
+    },
+    "sousuo": {
+        "x": 144,
+        "y": 144,
+        "width": 48,
+        "height": 48
+    },
+    "tonggao": {
+        "x": 192,
+        "y": 144,
+        "width": 48,
+        "height": 48
+    },
+    "tuijian": {
+        "x": 240,
+        "y": 144,
+        "width": 48,
+        "height": 48
+    },
+    "VIP": {
+        "x": 0,
+        "y": 192,
+        "width": 48,
+        "height": 48
+    },
+    "xiangce": {
+        "x": 48,
+        "y": 192,
+        "width": 48,
+        "height": 48
+    },
+    "xiangqin": {
+        "x": 96,
+        "y": 192,
+        "width": 48,
+        "height": 48
+    },
+    "xiaoxi": {
+        "x": 144,
+        "y": 192,
+        "width": 48,
+        "height": 48
+    },
+    "xihuan": {
+        "x": 192,
+        "y": 192,
+        "width": 48,
+        "height": 48
+    },
+    "xindong": {
+        "x": 240,
+        "y": 192,
+        "width": 48,
+        "height": 48
+    },
+    "xinxi": {
+        "x": 0,
+        "y": 240,
+        "width": 48,
+        "height": 48
+    },
+    "yaoqing": {
+        "x": 48,
+        "y": 240,
+        "width": 48,
+        "height": 48
+    },
+    "yinle": {
+        "x": 96,
+        "y": 240,
+        "width": 48,
+        "height": 48
+    },
+    "youxi": {
+        "x": 144,
+        "y": 240,
+        "width": 48,
+        "height": 48
+    },
+    "zhibo": {
+        "x": 192,
+        "y": 240,
+        "width": 48,
+        "height": 48
+    },
+    "zhibojian": {
+        "x": 240,
+        "y": 240,
+        "width": 48,
+        "height": 48
+    }
+}

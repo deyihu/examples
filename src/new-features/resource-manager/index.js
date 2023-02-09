@@ -5,7 +5,7 @@ var baseLayer = new maptalks.TileLayer('base', {
   attribution: '$(attribution)'
 });
 var map = new maptalks.Map('map', {
-  center: [114.26012989831725, 30.616193225646924],
+  center: [104.26012989831725, 30.616193225646924],
   zoom: 6,
   pitch: 0,
   attribution: true,
@@ -24,7 +24,7 @@ function createMarer(c, url, properties) {
       markerWidth: 25,
       markerHeight: 25
     },
-    properties: properties
+    properties: properties || {}
   });
 }
 
@@ -95,33 +95,45 @@ function testSprite(icons) {
   var center = map.getCenter();
   //get from cache
   var c1 = center.add(0, 1);
-  var p1 = createMarer(c1, rs.get('000'));
+  var p1 = createMarer(c1, rs.get('VIP'));
   p1.addTo(layer);
 
   //get from cache
   var c2 = c1.add(1, 0);
-  var p2 = createMarer(c2, rs.get('004'));
+  var p2 = createMarer(c2, rs.get('caiyi'));
   p2.addTo(layer);
 
   // Use expression($) get value
   var c3 = c2.add(1, 0);
-  var p3 = createMarer(c3, '$016');
+  var p3 = createMarer(c3, '$chongzhi');
   p3.addTo(layer);
 
   //Read dynamically from properties
   var c4 = c3.add(1, 0);
-  var p4 = createMarer(c4, '{icon}', { icon: '116' });
+  var p4 = createMarer(c4, '{icon}', { icon: 'daka' });
   p4.addTo(layer);
 
   //Read dynamically from properties
   var c5 = c4.add(1, 0);
-  var p5 = createMarer(c5, '{icon}', { icon: '125' });
+  var p5 = createMarer(c5, '{icon}', { icon: 'dazhaohu' });
   p5.addTo(layer);
 
   // Use expression($) get value
   var c6 = c5.add(1, 0);
-  var p6 = createMarer(c6, '$142');
+  var p6 = createMarer(c6, '$dengji');
   p6.addTo(layer);
+
+  // var extent = map.getExtent();
+  // var xmin = extent.xmin, ymin = extent.ymin, xmax = extent.xmax, ymax = extent.ymax;
+  // var dx = xmax - xmin, dy = ymax - ymin;
+  // function randomCoordinate() {
+  //   return [xmin + dx * Math.random(), ymin + dy * Math.random()];
+  // }
+
+  // for (var iconName in icons) {
+  //   var point = createMarer(randomCoordinate(), '$' + iconName);
+  //   point.addTo(layer);
+  // }
 
   //view all res
   console.log(rs.all());
