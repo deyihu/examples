@@ -65,13 +65,15 @@ function test1() {
 
   var center = map.getCenter();
   var c1 = center.add(0, 0);
+
+  // Use expression($) get value
   //get from cache,If it is not found in the cache, it will directly link the address with the rootUrl
-  var p1 = createMarer(c1, rs.get('13678959.png'));
+  var p1 = createMarer(c1, '$13678959.png');
   p1.addTo(layer);
 
   var c2 = c1.add(1, 0);
-  //get from cache
-  var p2 = createMarer(c2, rs.get('cat'));
+  // Use expression($) get value
+  var p2 = createMarer(c2, '$cat');
   p2.addTo(layer);
 
 
@@ -80,16 +82,18 @@ function test1() {
   var p3 = createMarer(c3, '$dog');
   p3.addTo(layer);
 
-  //Read dynamically from properties
+
+  //Read dynamically expression value from properties
   var c4 = c3.add(1, 0);
   var p4 = createMarer(c4, '{iconName}', { iconName: '$cat' });
   p4.addTo(layer);
 
-  //Read dynamically from properties
+  //Read dynamically expression value from properties
   var c5 = c4.add(1, 0);
   var p5 = createMarer(c5, '{iconName}', { iconName: '$13678959.png' });
   p5.addTo(layer);
 
+  //Read dynamically expression value from properties
   var c6 = c5.add(1, 0);
   var p6 = createMarer(c6, '{iconName}', { iconName: '$tile' });
   p6.addTo(layer);
@@ -107,14 +111,14 @@ function testSprite(icons) {
   console.log(icons);
 
   var center = map.getCenter();
-  //get from cache
+  // Use expression($) get value
   var c1 = center.add(0, 1);
-  var p1 = createMarer(c1, rs.get('VIP'));
+  var p1 = createMarer(c1, '$VIP');
   p1.addTo(layer);
 
-  //get from cache
+  // Use expression($) get value
   var c2 = c1.add(1, 0);
-  var p2 = createMarer(c2, rs.get('caiyi'));
+  var p2 = createMarer(c2, '$caiyi');
   p2.addTo(layer);
 
   // Use expression($) get value
@@ -122,12 +126,12 @@ function testSprite(icons) {
   var p3 = createMarer(c3, '$chongzhi');
   p3.addTo(layer);
 
-  //Read dynamically from properties
+  //Read dynamically expression value from properties
   var c4 = c3.add(1, 0);
   var p4 = createMarer(c4, '{iconName}', { iconName: '$daka' });
   p4.addTo(layer);
 
-  //Read dynamically from properties
+  //Read dynamically expression value from properties
   var c5 = c4.add(1, 0);
   var p5 = createMarer(c5, '{iconName}', { iconName: '$dazhaohu' });
   p5.addTo(layer);
