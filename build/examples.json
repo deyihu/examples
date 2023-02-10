@@ -1,19 +1,6 @@
 {
   "examples" : [
     {
-      "name" : "new-features",
-      "title" : {"cn" : "新功能", "en":"new features"},
-      "examples" : [
-        {"name" : "color-interpolate", "title" : {"cn" : "颜色插值", "en" : "color interpolate"}},
-        {"name" : "resource-manager", "title" : {"cn" : "静态资源管理", "en" : "resource-manager"}},
-        {"name" : "ui-collision", "title" : {"cn" : "UIComponent碰撞", "en" : "UIComponent collision"}},
-        {"name" : "options-proxy", "title" : {"cn" : "利用Proxy来更新配置信息", "en" : "update options by Proxy"}},
-        {"name" : "set-altitude", "title" : {"cn" : "设置图形的高度", "en" : "set geom altitude"}},
-        {"name" : "infowindow-scroll", "title" : {"cn" : "InfoWindow内容支持滚动", "en" : "infowindow content support scroll"}},
-        {"name" : "uimarker-align", "title" : {"cn" : "UIMarker对齐", "en" : "UIMarker Alignment"}}
-      ]
-    },
-    {
       "name" : "map",
       "title" : {"cn" : "地图", "en":"Map"},
       "examples" : [
@@ -96,7 +83,8 @@
         {"name" : "marker-draw-altitude", "title" : {"cn" : "绘制Marker的高度线", "en" : "Draw marker's altitude"}},
         {"name" : "line-altitude", "title" : {"cn" : "有高度的线", "en" : "LineString with altitude"}},
         {"name" : "line-draw-altitude", "title" : {"cn" : "绘制Line的高度面", "en" : "Draw line's altitude wall"}},
-        {"name" : "polygon-altitude", "title" : {"cn" : "有高度的多边形", "en" : "Polygon with altitude"}}
+        {"name" : "polygon-altitude", "title" : {"cn" : "有高度的多边形", "en" : "Polygon with altitude"}},
+        {"name" : "set-altitude", "title" : {"cn" : "设置图形的高度", "en" : "set geom altitude"},"mark":"new"}
       ]
     },
 
@@ -134,7 +122,8 @@
         {"name" : "html-marker", "title" : {"cn" : "HTML自定义标注", "en" : "Marker with HTML content"}},
         {"name" : "d3-marker", "title" : {"cn" : "D3图表样式", "en" : "Marker with D3 chart"}},
         {"name" : "echarts-marker", "title" : {"cn" : "Echarts图表样式", "en" : "Marker with echarts"}},
-        {"name" : "highcharts-marker", "title" : {"cn" : "Highcharts图表样式", "en" : "Marker with highcharts"}}
+        {"name" : "highcharts-marker", "title" : {"cn" : "Highcharts图表样式", "en" : "Marker with highcharts"}},
+        {"name" : "color-interpolate", "title" : {"cn" : "颜色插值", "en" : "color interpolate"}, "mark" : "new"}
       ]
     },
 
@@ -183,7 +172,14 @@
         {"name" : "mouse-contains", "title" : {"cn" : "鼠标与图形的空间关系", "en" : "Spatial relation between mouse and geometries"}}
       ]
     },
-
+    {
+      "name" : "utils",
+      "title" : {"cn" : "通用工具", "en":"common utils"},
+      "examples" : [
+        {"name" : "resource-manager", "title" : {"cn" : "静态资源管理", "en" : "resource manager"},"mark":"new"},
+        {"name" : "options-proxy", "title" : {"cn" : "利用Proxy来更新配置信息", "en" : "update options by Proxy"},"mark":"new"}
+      ]
+    },
     {
       "name" : "animation",
       "title" : {"cn" : "动画", "en" : "Animation"},
@@ -210,6 +206,9 @@
         {"name" : "ui-geo-infownd", "title" : {"cn" : "图形信息框", "en" : "Geometry's InfoWindow"}},
         {"name" : "ui-custom-infownd", "title" : {"cn" : "自定义信息框", "en" : "Custom InfoWindow"}},
         {"name" : "ui-geo-infownd-bind-mvvm-component", "title" : {"cn" : "信息框绑定MVVM组件", "en" : "InfoWindow bind MVVM component"}},
+        {"name" : "infowindow-scroll", "title" : {"cn" : "InfoWindow内容支持滚动", "en" : "infowindow content support scroll"},"mark":"new"},
+        {"name" : "uimarker-align", "title" : {"cn" : "UIMarker对齐", "en" : "UIMarker Alignment"},"mark":"new"},
+        {"name" : "ui-collision", "title" : {"cn" : "UIComponent碰撞", "en" : "UIComponent collision"},"mark":"new"},
 
         {"name" : "control-toolbar", "title" : {"cn" : "Toolbar控件", "en" : "Toolbar Control"}},
         {"name" : "control-panel", "title" : {"cn" : "Panel控件", "en" : "Panel Control"}},
