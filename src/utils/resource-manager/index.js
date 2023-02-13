@@ -159,6 +159,7 @@ function testSprite(icons) {
 test();
 test1();
 //load sprite icons,sprite icons will auto add to cache
+// how to create sprite resource: https://deyihu.github.io/sprite-creator/
 rs.loadSprite({
   imgUrl: './../icons/raw/sprite.png',
   jsonUrl: './../icons/raw/sprite.json'
