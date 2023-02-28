@@ -32,7 +32,8 @@ function addMarkers() {
       collisionWeight: 1,
       collisionFadeIn: true,
       content: createMarkerContent(f.name + '_' + index),
-      dy: -30
+      verticalAlignment: 'top',
+      dy: -6
     });
   });
   //test InfoWindow

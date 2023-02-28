@@ -27,9 +27,11 @@ function createMarer(c, url, properties) {
 }
 
 var rs = maptalks.ResourceManager;
+//set resource root url for get resouce
 rs.setRootUrl('./../icons/raw/');
 
 //add res to cache,you can add any res to cache
+rs.add('maptalks', '13678959.png');
 rs.add('cat', '13678919.jfif');
 rs.add('dog', '25998927.jfif');
 //add remote res
@@ -58,6 +60,15 @@ function test() {
   var p4 = createMarer(c4, '{iconName}', { iconName: './../icons/raw/13678959.png' });
   p4.addTo(layer);
 
+  var c5 = c4.add(1, 0);
+  var p5 = createMarer(c5, '{iconName}', { iconName: './../icons/raw/13678919.jfif' });
+  p5.addTo(layer);
+
+
+  var c6 = c5.add(1, 0);
+  var p6 = createMarer(c6, '{iconName}', { iconName: './../icons/raw/25998927.jfif' });
+  p6.addTo(layer);
+
 }
 
 //get from ResourceManager
@@ -85,12 +96,12 @@ function test1() {
 
   //Read dynamically expression value from properties
   var c4 = c3.add(1, 0);
-  var p4 = createMarer(c4, '{iconName}', { iconName: '$cat' });
+  var p4 = createMarer(c4, '{iconName}', { iconName: '$maptalks' });
   p4.addTo(layer);
 
   //Read dynamically expression value from properties
   var c5 = c4.add(1, 0);
-  var p5 = createMarer(c5, '{iconName}', { iconName: '$13678959.png' });
+  var p5 = createMarer(c5, '{iconName}', { iconName: '$cat' });
   p5.addTo(layer);
 
   //Read dynamically expression value from properties
@@ -98,9 +109,9 @@ function test1() {
   var p6 = createMarer(c6, '{iconName}', { iconName: '$tile' });
   p6.addTo(layer);
 
-  // Use expression($) get value
+  //Read dynamically expression value from properties
   var c7 = c6.add(1, 0);
-  var p7 = createMarer(c7, '$location');
+  var p7 = createMarer(c7, '{iconName}', { iconName: '$location' });
   p7.addTo(layer);
 }
 
@@ -136,9 +147,9 @@ function testSprite(icons) {
   var p5 = createMarer(c5, '{iconName}', { iconName: '$dazhaohu' });
   p5.addTo(layer);
 
-  // Use expression($) get value
+  //Read dynamically expression value from properties
   var c6 = c5.add(1, 0);
-  var p6 = createMarer(c6, '$dengji');
+  var p6 = createMarer(c6, '{iconName}', { iconName: '$dengji' });
   p6.addTo(layer);
 
   // var extent = map.getExtent();
@@ -160,6 +171,7 @@ test();
 test1();
 //load sprite icons,sprite icons will auto add to cache
 // how to create sprite resource: https://deyihu.github.io/sprite-creator/
+// If you have a large number of icons in your business, you can make them into sprites, which can greatly reduce network requests and thus have better performance
 rs.loadSprite({
   imgUrl: './../icons/raw/sprite.png',
   jsonUrl: './../icons/raw/sprite.json'
