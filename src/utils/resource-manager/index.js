@@ -260,8 +260,8 @@ test1();
 // how to create sprite resource: https://deyihu.github.io/sprite-creator/
 // If you have a large number of icons in your business, you can make them into sprites, which can greatly reduce network requests and thus have better performance
 rs.loadSprite({
-  imgUrl: './../icons/raw/sprite.png',
-  jsonUrl: './../icons/raw/sprite.json'
+  imgUrl: rs.get('sprite/raw/sprite.png'),
+  jsonUrl: rs.get('sprite/raw/sprite.json')
 }).then(testSprite).catch(function (err) {
   console.log(err);
 });
