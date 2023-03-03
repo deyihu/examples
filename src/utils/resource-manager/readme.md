@@ -3,12 +3,12 @@ If you need to get resources from `ResourceManager`, you must use the `$` sign t
 The structure of the static resource root directory in the current example is listed here for the convenience of understanding the following code. There are no restrictions on the use of specific projects, as long as you ensure that the path of the `$` value file is correct
 ```
 ├─index.html
-├─text.txt
 ├─svgs
 |  ├─raw
 |  |  ├─anjian.svg
 |  |  ├─anquan.svg
-|  |  └huiyuan.svg
+|  |  ├─huiyuan.svg
+|  |  └svg-collection.json
 ├─sprite
 |   ├─raw
 |   |  ├─sprite.json

@@ -2,12 +2,12 @@
 当前例子静态资源根目录的结构,这里列出来只是方便理解下面的代码,具体项目里使用不做任何限制,只要你保证 `$` 取值文件的路径正确即可
 ```
 ├─index.html
-├─text.txt
 ├─svgs
 |  ├─raw
 |  |  ├─anjian.svg
 |  |  ├─anquan.svg
-|  |  └huiyuan.svg
+|  |  ├─huiyuan.svg
+|  |  └svg-collection.json
 ├─sprite
 |   ├─raw
 |   |  ├─sprite.json

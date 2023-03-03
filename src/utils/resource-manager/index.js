@@ -225,32 +225,32 @@ function testSvgs(data) {
   var center = map.getCenter();
   // Use expression($) get value
   var c1 = center.add(0, 2);
-  var p1 = createMarer(c1, '$svgs/raw/anjian.svg');
+  var p1 = createMarer(c1, '$anjian.svg');
   p1.addTo(layer);
 
   // Use expression($) get value
   var c2 = c1.add(1, 0);
-  var p2 = createMarer(c2, '$svgs/raw/anquan.svg');
+  var p2 = createMarer(c2, '$anquan.svg');
   p2.addTo(layer);
 
   // Use expression($) get value
   var c3 = c2.add(1, 0);
-  var p3 = createMarer(c3, '$svgs/raw/huiyuan.svg');
+  var p3 = createMarer(c3, '$huiyuan.svg');
   p3.addTo(layer);
 
   //Read dynamically expression value from properties
   var c4 = c3.add(1, 0);
-  var p4 = createMarer(c4, '{iconName}', { iconName: '$svgs/raw/anjian.svg' });
+  var p4 = createMarer(c4, '{iconName}', { iconName: '$anjian.svg' });
   p4.addTo(layer);
 
   //Read dynamically expression value from properties
   var c5 = c4.add(1, 0);
-  var p5 = createMarer(c5, '{iconName}', { iconName: '$svgs/raw/anquan.svg' });
+  var p5 = createMarer(c5, '{iconName}', { iconName: '$anquan.svg' });
   p5.addTo(layer);
 
   //Read dynamically expression value from properties
   var c6 = c5.add(1, 0);
-  var p6 = createMarer(c6, '{iconName}', { iconName: '$svgs/raw/huiyuan.svg' });
+  var p6 = createMarer(c6, '{iconName}', { iconName: '$huiyuan.svg' });
   p6.addTo(layer);
 
 }
@@ -266,12 +266,15 @@ rs.loadSprite({
   console.log(err);
 });
 // load svgs resource,all svg auto add to ResourceManager cache,Note that all svg resources need to be placed in the rooturl directory
+// rs.loadSvgs([
+//   'svgs/raw/anjian.svg', 'svgs/raw/anquan.svg', 'svgs/raw/huiyuan.svg'
+// ]).then(testSvgs).catch(function (err) {
+//   console.log(err);
+// });
 
-rs.loadSvgs([
-  'svgs/raw/anjian.svg', 'svgs/raw/anquan.svg', 'svgs/raw/huiyuan.svg'
-]).then(testSvgs).catch(function (err) {
+//If there are a lot of svg icons, you can use https://deyihu.github.io/sprite-creator/svg.html to create svgs collection json
+rs.loadSvgs(rs.get('svgs/raw/svg-collection.json')).then(testSvgs).catch(function (err) {
   console.log(err);
 });
-
 
 
