@@ -67,15 +67,18 @@ function test() {
 
 
   var c4 = c3.add(1, 0);
+  //Read dynamically  value from properties
   var p4 = createMarer(c4, '{iconName}', { iconName: './../icons/raw/13678959.png' });
   p4.addTo(layer);
 
   var c5 = c4.add(1, 0);
+  //Read dynamically  value from properties
   var p5 = createMarer(c5, '{iconName}', { iconName: './../icons/raw/13678919.jfif' });
   p5.addTo(layer);
 
 
   var c6 = c5.add(1, 0);
+  //Read dynamically  value from properties
   var p6 = createMarer(c6, '{iconName}', { iconName: './../icons/raw/25998927.jfif' });
   p6.addTo(layer);
 
@@ -258,13 +261,18 @@ test();
 test1();
 //load sprite icons,sprite icons will auto add to cache
 // how to create sprite resource: https://deyihu.github.io/sprite-creator/
-// If you have a large number of icons in your business, you can make them into sprites, which can greatly reduce network requests and thus have better performance
+// If you have a large number of icons in your business, you can make them into sprites, 
+// which can greatly reduce network requests and thus have better performance
 rs.loadSprite({
   imgUrl: rs.get('sprite/raw/sprite.png'),
   jsonUrl: rs.get('sprite/raw/sprite.json')
 }).then(testSprite).catch(function (err) {
   console.log(err);
 });
+
+//loadSvgs support load svg files/svg collection json/svg symbol dom list
+
+//1.load files
 // load svgs resource,all svg auto add to ResourceManager cache,Note that all svg resources need to be placed in the rooturl directory
 // rs.loadSvgs([
 //   'svgs/raw/anjian.svg', 'svgs/raw/anquan.svg', 'svgs/raw/huiyuan.svg'
@@ -272,9 +280,14 @@ rs.loadSprite({
 //   console.log(err);
 // });
 
+//2.load svg collection json
 //If there are a lot of svg icons, you can use https://deyihu.github.io/sprite-creator/svg.html to create svgs collection json
 rs.loadSvgs(rs.get('svgs/raw/svg-collection.json')).then(testSvgs).catch(function (err) {
   console.log(err);
 });
+
+// 3. load symbol dom list
+
+
 
 

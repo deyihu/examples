@@ -177,6 +177,7 @@
       "title" : {"cn" : "通用工具", "en":"common utils"},
       "examples" : [
         {"name" : "resource-manager", "title" : {"cn" : "静态资源管理", "en" : "resource manager"},"mark":"new"},
+        {"name" : "resource-manager-svg-symbol", "title" : {"cn" : "静态资源管理-svg-sybmol", "en" : "resource manager svg symbol"},"mark":"new"},
         {"name" : "options-proxy", "title" : {"cn" : "利用Proxy来更新配置信息", "en" : "update options by Proxy"},"mark":"new"}
       ]
     },
