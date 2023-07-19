@@ -24,6 +24,7 @@ const map = new maptalks.Map("map", {
 });
 
 const layer = new maptalks.Geo3DTilesLayer("3dtiles", {
+  geometryEvents: true,
   services: [
     {
       url: "http://resource.dvgis.cn/data/3dtiles/dayanta/tileset.json",
@@ -66,6 +67,21 @@ const groupGLLayer = new maptalks.GroupGLLayer("gl", [layer], {
 }).addTo(map);
 
 /**start**/
+
+function getInfoWindowCoordinate(event) {
+  const { target, coordinate } = event;
+  const layer = target.getLayer();
+  if (!layer || !layer.identify) {
+    return;
+  }
+  const result = layer.identify(coordinate) || [];
+  const len = result.length;
+  if (!len) {
+    return;
+  }
+  const coord = result[len - 1].coordinate;
+  return new maptalks.Coordinate(coord);
+}
 function setEventAndInfowindow(mask) {
   mask.on("mouseover mouseout", (e) => {
     let polygonFill = "#ea6b48";
@@ -78,9 +94,17 @@ function setEventAndInfowindow(mask) {
   });
   const name = mask.getProperties().name;
   mask.setInfoWindow({
+    title: name,
     content: `名称: ${name} </br>地址: xxxx大道118号</br>联系方式:132xxx4422`,
-    autoCloseOn: "click"
+    //not auto open infowindow,show by Manual triggering
+    autoOpenOn: "null"
   });
+  mask.on('click', e => {
+    const coordinate = getInfoWindowCoordinate(e);
+    if (coordinate) {
+      e.target.getInfoWindow().show(coordinate)
+    };
+  })
 }
 
 function loadEntities() {
